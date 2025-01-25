@@ -1,13 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <section>
-        <h2>My Projects</h2>
+<section>
+    <h2>About Me</h2>
+    <div class="profile-section">
+        <img src="{{ url_for('static', filename='images/profile.JPG') }}" alt="Profile Picture" class="profile-pic">
+        <p>Hi, I'm Atul Kumar, a Python Developer and Data Engineer with experience in building scalable data pipelines, designing APIs, and developing web applications. I’m passionate about coding, traveling, and learning new technologies.</p>
+    </div>
+</section>
+
+<section>
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project 1">
+            <h3>Data Processing Pipeline</h3>
+            <p>Developed a scalable real-time data processing pipeline using PySpark and Kafka.</p>
+        </div>
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='images/project1.png') }}" alt="Project 2">
+            <h3>API Development</h3>
+            <p>Designed RESTful APIs in Flask for generating detailed data for SIEM modules Reports, Rule, Incidents and Dashboards.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Me</h2>
+    <div class="contact-section">
+        <p>Feel free to reach out to me for collaboration or inquiries!</p>
         <ul>
-            <li><strong>Data Processing Pipeline:</strong> Built a scalable pipeline in PySpark for real-time data.</li>
-            <li><strong>API Development:</strong> Designed REST APIs using Flask for report generation.</li>
-            <li><strong>SIEM Systems:</strong> Developed SIEM integrations for log analysis and event correlation.</li>
-            <li><strong>Web Applications:</strong> Created full-stack apps with Flask, MySQL, and JavaScript.</li>
+            <li>Email: <a href="mailto:atuloffdev@gmail.com">atuloffdev@gmail.com</a></li>
+            <li>Phone: +91 - 972 752 2431</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/atul-kumar-5b8b1b169/" target="_blank">linkedin.com/in/atul-kumar-5b8b1b169</a></li>
+            <li>GitHub: <a href="https://github.com/Atul9662" target="_blank">github.com/Atul9662</a></li>
         </ul>
-    </section>
+    </div>
+</section>
 {% endblock %}
